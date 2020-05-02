@@ -13,10 +13,10 @@ import {Link} from 'react-router-dom';
 
 import mainMenuData from '@/db/mainMenuData';
 import MainFeaturedPost from '@/ui-kit/widgets/MainFeaturedPost/MainFeaturedPost';
-import mainFeaturedPostData from '@/db/mainFeaturedPostData';
-import featuredPostsData from '@/db/featuredPostsData';
+import featurePost from '@/db/featurePosts/featurePost';
 import sidebarData from '@/db/sidebarData';
-import posts from '@/db/post/posts';
+import dailyPosts from '@/db/daylyPosts/daylyPosts';
+import featuredPosts from '@/db/featurePosts/featuredPosts';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -36,14 +36,14 @@ const MainPage = () => {
         <HeaderDefault title={t('step by step')} />
         <HeaderMenu sections={menuTranslated} component={Link}/>
         <main>
-          <MainFeaturedPost post={mainFeaturedPostData} />
+          <MainFeaturedPost post={featurePost} />
           <Grid container spacing={4}>
-            {featuredPostsData.map((post) => (
+            {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
-            <PostList title="From the firehose" posts={posts} />
+            <PostList title="From the firehose" posts={dailyPosts} />
             <Sidebar
               title={sidebarData.title}
               description={sidebarData.description}

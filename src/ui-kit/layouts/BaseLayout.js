@@ -1,7 +1,6 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import HeaderDefault from '@/components/Header/HeaderDefault';
 import Footer from '@/temp/Footer';

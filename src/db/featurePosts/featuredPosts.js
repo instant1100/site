@@ -1,6 +1,6 @@
-const featuredPostsData = [
+const featuredPosts = [
   {
-    title: 'Featured post',
+    title: 'Featured daylyPosts',
     date: 'Nov 12',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
@@ -17,4 +17,4 @@ const featuredPostsData = [
   },
 ];
 
-export default featuredPostsData;
+export default featuredPosts;
