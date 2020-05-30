@@ -35,5 +35,7 @@ export default {
   'time_tracing/spend': 'Потрачено: {{value}} ч.',
 
   'form/save': 'Сохранить',
+
+  'module/unavailable_module': 'Модуль временно недоступен'
 }
 

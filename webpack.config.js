@@ -1,5 +1,5 @@
 const path = require('path');
-console.log(__dirname);
+console.log(path.resolve(__dirname, 'src/module/TimeTracer'));
 
 module.exports = {
     entry: './src/index.js',
@@ -14,7 +14,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, 'src')
+            '@': path.resolve(__dirname, 'src'),
+            '$TimeTracer': path.resolve(__dirname, 'src/modules/TimeTracer')
         }
     },
     module: {
