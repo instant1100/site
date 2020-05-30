@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import i18n, { languages } from '@/core/i18n/i18n';
+import i18n, { languages } from '@/i18n/i18n';
 
 const LanguageSwitcher = () => {
   const changeLanguage = (e) => {

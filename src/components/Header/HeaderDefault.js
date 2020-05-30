@@ -12,6 +12,7 @@ import Subscribe from '@/core/features/Subscribe/Subscribe';
 import InDeveloping from '@/core/features/InDeveloping/InDeveloping';
 import {useTranslation} from 'react-i18next';
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -46,7 +47,8 @@ const HeaderDefault = ({ title }) => {
         </Subscribe>
 
         <Typography
-          component="h2"
+          component={Link}
+          to="/"
           variant="h5"
           color="inherit"
           align="center"

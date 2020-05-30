@@ -10,7 +10,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "public"),
         compress: true,
-        port: 1000
+        port: 2000
     },
     resolve: {
         alias: {

@@ -5,7 +5,7 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   toolbarSecondary: {
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     overflowX: 'auto',
   },
   toolbarLink: {
