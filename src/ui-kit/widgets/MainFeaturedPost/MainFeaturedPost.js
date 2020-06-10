@@ -53,7 +53,7 @@ export default function MainFeaturedPost(props) {
             <Typography variant="h5" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" href="#">
+            <Link variant="subtitle1" to={post.url}>
               {post.linkText}
             </Link>
           </div>
@@ -64,5 +64,12 @@ export default function MainFeaturedPost(props) {
 }
 
 MainFeaturedPost.propTypes = {
-  post: PropTypes.object,
+  post: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    imageText: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    linkText: PropTypes.string.isRequired,
+    url: PropTypes.string,
+  }).isRequired,
 };

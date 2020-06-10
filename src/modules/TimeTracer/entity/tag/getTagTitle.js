@@ -1,5 +1,3 @@
-const getTagTitle = (tag) => {
-  return tag.name;
-};
+const getTagTitle = (tag) => tag.name;
 
 export default getTagTitle;

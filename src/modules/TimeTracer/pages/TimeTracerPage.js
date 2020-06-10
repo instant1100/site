@@ -12,59 +12,57 @@ import StreamsList from '@/modules/TimeTracer/entity/stream/components/StreamsLi
 import TagsForm from '@/modules/TimeTracer/entity/tag/components/TagsForm';
 import TagsList from '@/modules/TimeTracer/entity/tag/components/TagsList';
 
-const TimeTracerPage = () => {
-  return (
-    <BaseLayout>
-      <Grid container spacing={3}>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <WordsForm />
-          </DefaultFormPaper>
-        </Grid>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <WordsList />
-          </DefaultFormPaper>
-        </Grid>
+const TimeTracerPage = () => (
+  <BaseLayout>
+    <Grid container spacing={3}>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <WordsForm />
+        </DefaultFormPaper>
       </Grid>
-      <Grid container spacing={3}>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <ActivitiesForm />
-          </DefaultFormPaper>
-        </Grid>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <ActivitiesList />
-          </DefaultFormPaper>
-        </Grid>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <WordsList />
+        </DefaultFormPaper>
       </Grid>
-      <Grid container spacing={3}>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <StreamsForm />
-          </DefaultFormPaper>
-        </Grid>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <StreamsList />
-          </DefaultFormPaper>
-        </Grid>
+    </Grid>
+    <Grid container spacing={3}>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <ActivitiesForm />
+        </DefaultFormPaper>
       </Grid>
-      <Grid container spacing={3}>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <TagsForm />
-          </DefaultFormPaper>
-        </Grid>
-        <Grid item md={4}>
-          <DefaultFormPaper>
-            <TagsList />
-          </DefaultFormPaper>
-        </Grid>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <ActivitiesList />
+        </DefaultFormPaper>
       </Grid>
-    </BaseLayout>
-  );
-};
+    </Grid>
+    <Grid container spacing={3}>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <StreamsForm />
+        </DefaultFormPaper>
+      </Grid>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <StreamsList />
+        </DefaultFormPaper>
+      </Grid>
+    </Grid>
+    <Grid container spacing={3}>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <TagsForm />
+        </DefaultFormPaper>
+      </Grid>
+      <Grid item md={4}>
+        <DefaultFormPaper>
+          <TagsList />
+        </DefaultFormPaper>
+      </Grid>
+    </Grid>
+  </BaseLayout>
+);
 
 export default TimeTracerPage;

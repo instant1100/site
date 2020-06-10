@@ -1,5 +1,5 @@
-import useTimeTracerAvailable from '$TimeTracer/useAvailable'
-import useLessonsModule from '$Lessons/useAvailable'
+import useTimeTracerAvailable from '$TimeTracer/useAvailable';
+import useLessonsModule from '$Lessons/useAvailable';
 
 const modulesList = [
   {

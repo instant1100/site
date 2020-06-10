@@ -3,8 +3,10 @@ import React from 'react';
 import BaseLayout from '@/ui-kit/layouts/BaseLayout';
 import DefaultFormPaper from '@/ui-kit/Forms/DefaultFormPaper';
 import Grid from '@material-ui/core/Grid';
-import {ACTIVITY_ENTITY, STREAM_ENTITY, TAG_ENTITY, WORD_ENTITY} from '@/modules/TimeTracer/entity/entityMap';
-import {useParams} from 'react-router';
+import {
+  ACTIVITY_ENTITY, STREAM_ENTITY, TAG_ENTITY, WORD_ENTITY,
+} from '@/modules/TimeTracer/entity/entityMap';
+import { useParams } from 'react-router';
 import WordsForm from '@/modules/TimeTracer/entity/word/components/WordsForm';
 import WordsList from '@/modules/TimeTracer/entity/word/components/WordsList';
 import StreamsForm from '@/modules/TimeTracer/entity/stream/components/StreamsForm';
@@ -34,7 +36,7 @@ const componentMap = {
   },
 };
 
-const EntityPage = ({entity: entityFromProps}) => {
+const EntityPage = ({ entity: entityFromProps }) => {
   const { entity: entityFromURL } = useParams();
   const entity = entityFromProps || entityFromURL;
 
@@ -57,6 +59,10 @@ const EntityPage = ({entity: entityFromProps}) => {
       </Grid>
     </BaseLayout>
   );
+};
+
+EntityPage.defaultProps = {
+  entity: null,
 };
 
 EntityPage.propTypes = {

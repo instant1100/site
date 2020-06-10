@@ -15,10 +15,13 @@ const LanguageSwitcher = () => {
       value={i18n.language}
       onChange={changeLanguage}
     >
-      {languages.map(({id}) => <MenuItem key={id} value={id}>{id}</MenuItem>)};
-
+      {languages.map(({ id }) => {
+        return (
+          <MenuItem key={id} value={id}>{id}</MenuItem>
+        );
+      })}
     </Select>
-  )
+  );
 };
 
 export default React.memo(LanguageSwitcher);

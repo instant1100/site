@@ -1,8 +1,9 @@
 import AlertDialog from '@/ui-kit/Dialogs/Alert';
 import React from 'react';
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
-const InDeveloping = ({children}) => {
+const InDeveloping = ({ children }) => {
   const [open, setOpen] = React.useState(false);
   const { t } = useTranslation();
 
@@ -16,16 +17,25 @@ const InDeveloping = ({children}) => {
 
   return (
     <>
-      {children({onClick: handleClickOpen})}
+      {children({ onClick: handleClickOpen })}
 
       <AlertDialog
         open={open}
         handleClose={handleClose}
         buttonTitle="ok"
-        content={[t('In developing')]}
-      />
+      >
+        {t('In developing')}
+      </AlertDialog>
     </>
-  )
+  );
+};
+
+InDeveloping.defaultProps = {
+  children: null,
+};
+
+InDeveloping.propTypes = {
+  children: PropTypes.func,
 };
 
 export default InDeveloping;

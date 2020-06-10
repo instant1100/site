@@ -4,11 +4,9 @@ const emptyWord = {
   word: '',
 };
 
-const createWordEntity = (data = {}) => {
-  return {
-    ...emptyWord,
-    ...data,
-  }
-};
+const createWordEntity = (data = {}) => ({
+  ...emptyWord,
+  ...data,
+});
 
 export default createWordEntity;

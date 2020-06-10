@@ -7,17 +7,15 @@ import modulesList from '@/core/modulesLoader/modulesList';
 const DefaultMenu = () => {
   const { t } = useTranslation();
   const menuItems = modulesList
-    .filter(item => item.checkHook())
-    .map(item => {
-      return {
-        ...item,
-        title: t(`menu/${item.key}`),
-        key: item.key,
-        url: item.path,
-    }
-  });
+    .filter((item) => item.checkHook())
+    .map((item) => ({
+      ...item,
+      title: t(`menu/${item.key}`),
+      key: item.key,
+      url: item.path,
+    }));
 
-  return <HeaderMenu sections={menuItems} component={Link}/>
+  return <HeaderMenu sections={menuItems} component={Link} />;
 };
 
 export default DefaultMenu;

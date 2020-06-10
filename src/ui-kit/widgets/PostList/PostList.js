@@ -32,9 +32,15 @@ const PostList = (props) => {
   );
 };
 
-PostList.propTypes = {
-  posts: PropTypes.array,
-  title: PropTypes.string,
+PostList.defaultProps = {
+  title: '',
+  posts: [],
 };
 
-export default PostList
+PostList.propTypes = {
+  title: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  posts: PropTypes.arrayOf(PropTypes.node),
+};
+
+export default PostList;

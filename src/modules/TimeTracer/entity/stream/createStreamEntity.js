@@ -6,11 +6,9 @@ const emptyStream = {
   image: null,
 };
 
-const createStreamEntity = (data = {}) => {
-  return {
-    ...emptyStream,
-    ...data,
-  }
-};
+const createStreamEntity = (data = {}) => ({
+  ...emptyStream,
+  ...data,
+});
 
 export default createStreamEntity;

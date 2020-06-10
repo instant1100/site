@@ -1,5 +1,3 @@
-const getStreamTitle = (stream) => {
-  return stream.name;
-};
+const getStreamTitle = (stream) => stream.name;
 
 export default getStreamTitle;

@@ -4,16 +4,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppRouter from '@/core/AppRouter';
 import AppProviderDB from '@/core/AppDB/AppProviderDB';
 
-const App = () => {
-  return (
-    <>
-      <CssBaseline />
+const App = () => (
+  <>
+    <CssBaseline />
 
-      <AppProviderDB>
-        <AppRouter />
-      </AppProviderDB>
-    </>
-  )
-};
+    <AppProviderDB>
+      <AppRouter />
+    </AppProviderDB>
+  </>
+);
 
 export default App;

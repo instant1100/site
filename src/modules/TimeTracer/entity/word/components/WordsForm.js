@@ -1,16 +1,16 @@
-import React, {useCallback} from 'react';
-import {useTranslation} from 'react-i18next';
+import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import {makeStyles} from '@material-ui/core/styles';
-import {useParams} from 'react-router';
-import {Formik} from 'formik';
+import { makeStyles } from '@material-ui/core/styles';
+import { useParams } from 'react-router';
+import { Formik } from 'formik';
 import FormControl from '@material-ui/core/FormControl';
-import {WORD_ENTITY} from '@/modules/TimeTracer/entity/entityMap';
+import { WORD_ENTITY } from '@/modules/TimeTracer/entity/entityMap';
 import useSafeEntity from '@/modules/TimeTracer/entity/_common/useSafeEntity';
-import {saveEntity} from '@/core/AppDB/MethodsDB';
+import { saveEntity } from '@/core/AppDB/MethodsDB';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -21,37 +21,34 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     flexDirection: 'column',
-    display: 'flex'
+    display: 'flex',
   },
 }));
 
 const WordsForm = () => {
   const classes = useStyles();
 
-  const {t} = useTranslation();
-  let { id } = useParams();
+  const { t } = useTranslation();
+  const { id } = useParams();
   const currentWordEntity = useSafeEntity(WORD_ENTITY, id);
 
-  const submit = useCallback((values) => {
-    return saveEntity(WORD_ENTITY, id, values);
-  }, [id]);
+  const submit = useCallback((values) => saveEntity(WORD_ENTITY, id, values), [id]);
 
   return (
     <Formik
       initialValues={currentWordEntity}
-      enableReinitialize={true}
+      enableReinitialize
 
       onSubmit={(values) => {
         submit(values);
       }}
     >
       {({
-          values,
-          handleChange,
-          handleSubmit
-        }) => {
-
-        return <form onSubmit={handleSubmit} noValidate autoComplete="off" className={classes.form}>
+        values,
+        handleChange,
+        handleSubmit,
+      }) => (
+        <form onSubmit={handleSubmit} noValidate autoComplete="off" className={classes.form}>
           <Typography variant="h6" gutterBottom>
             {id ? t('time_tracing/edit_word') : t('time_tracing/new_word')}
           </Typography>
@@ -86,9 +83,9 @@ const WordsForm = () => {
             </Button>
           </FormControl>
         </form>
-      }}
+      )}
     </Formik>
-  )
+  );
 };
 
 export default WordsForm;

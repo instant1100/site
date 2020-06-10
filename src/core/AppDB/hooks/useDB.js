@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import { useContext } from 'react';
 import DBContext from '@/core/AppDB/DBContext';
 
 const useDB = (entity) => {
@@ -7,4 +7,4 @@ const useDB = (entity) => {
   return entity ? data[entity] || [] : data;
 };
 
-export default  useDB;
+export default useDB;

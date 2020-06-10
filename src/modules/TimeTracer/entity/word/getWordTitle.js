@@ -1,5 +1,3 @@
-const getWordTitle = (word) => {
-  return word.word;
-};
+const getWordTitle = (word) => word.word;
 
 export default getWordTitle;

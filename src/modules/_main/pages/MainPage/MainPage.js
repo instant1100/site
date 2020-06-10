@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import FeaturedPost from '../../../../ui-kit/widgets/FeaturedPost/FeaturedPost';
-import Sidebar from '../../../../temp/Sidebar';
 import PostList from '@/ui-kit/widgets/PostList/PostList';
 import MainFeaturedPost from '@/ui-kit/widgets/MainFeaturedPost/MainFeaturedPost';
 import featurePost from '@/db/featurePosts/featurePost';
@@ -10,6 +8,8 @@ import sidebarData from '@/db/sidebarData';
 import dailyPosts from '@/db/daylyPosts/daylyPosts';
 import featuredPosts from '@/db/featurePosts/featuredPosts';
 import PageLayout from '@/modules/_main/components/PageLayout/PageLayout';
+import Sidebar from '../../../../temp/Sidebar';
+import FeaturedPost from '../../../../ui-kit/widgets/FeaturedPost/FeaturedPost';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {

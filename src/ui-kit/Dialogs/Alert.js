@@ -8,8 +8,9 @@ import MuiDialogContent from '@material-ui/core/DialogContent/DialogContent';
 import MuiDialogActions from '@material-ui/core/DialogActions/DialogActions';
 import Dialog from '@material-ui/core/Dialog';
 import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
@@ -22,8 +23,10 @@ const styles = theme => ({
   },
 });
 
-const DialogTitle = withStyles(styles)(props => {
-  const { children, classes, onClose, ...other } = props;
+const DialogTitle = withStyles(styles)((props) => {
+  const {
+    children, classes, onClose, ...other
+  } = props;
   return (
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
       <Typography variant="h6">{children}</Typography>
@@ -36,20 +39,22 @@ const DialogTitle = withStyles(styles)(props => {
   );
 });
 
-const DialogContent = withStyles(theme => ({
+const DialogContent = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles(theme => ({
+const DialogActions = withStyles((theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(1),
   },
 }))(MuiDialogActions);
 
-const AlertDialog = ({ handleClose, title, content, buttonTitle, open }) => (
+const AlertDialog = ({
+  handleClose, title, children, buttonTitle, open,
+}) => (
   <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
     {title && (
       <DialogTitle id="customized-dialog-title" onClose={handleClose}>
@@ -57,11 +62,9 @@ const AlertDialog = ({ handleClose, title, content, buttonTitle, open }) => (
       </DialogTitle>
     )}
     <DialogContent dividers>
-      {content.map((item, key) => (
-        <Typography key={key} gutterBottom>
-          {item}
-        </Typography>
-      ))}
+      <Typography gutterBottom>
+        {children}
+      </Typography>
     </DialogContent>
     <DialogActions>
       <Button autoFocus onClick={handleClose} color="primary">
@@ -70,5 +73,18 @@ const AlertDialog = ({ handleClose, title, content, buttonTitle, open }) => (
     </DialogActions>
   </Dialog>
 );
+
+AlertDialog.defaultProps = {
+  title: null,
+  open: false,
+};
+
+AlertDialog.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  buttonTitle: PropTypes.string.isRequired,
+  open: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+};
 
 export default AlertDialog;

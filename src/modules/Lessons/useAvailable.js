@@ -1,5 +1,3 @@
-const useAvailable = () => {
-  return true;
-};
+const useAvailable = () => true;
 
 export default useAvailable;

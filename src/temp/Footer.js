@@ -11,7 +11,8 @@ function Copyright() {
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
         Your Website
-      </Link>{' '}
+      </Link>
+      {' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -44,6 +45,11 @@ export default function Footer(props) {
     </footer>
   );
 }
+
+Footer.defaultProps = {
+  description: null,
+  title: null,
+};
 
 Footer.propTypes = {
   description: PropTypes.string,

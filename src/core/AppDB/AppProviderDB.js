@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import DBContext, { DBContextStatus } from '@/core/AppDB/DBContext';
 import {
   APP_DB_STATUS_CLOSE,
@@ -6,12 +6,13 @@ import {
   APP_DB_STATUS_ERROR,
   APP_DB_STATUS_HAS_DATA,
   APP_DB_STATUS_INITIALIZATION,
-  APP_DB_STATUS_OPEN
+  APP_DB_STATUS_OPEN,
 } from '@/core/AppDB/DBStatuses';
+import PropTypes from 'prop-types';
 
 const statusesForConnection = [APP_DB_STATUS_INITIALIZATION];
 
-const AppProviderDB = ({children}) => {
+const AppProviderDB = ({ children }) => {
   const [data, setData] = useState({});
   const [firstConnect, setFirstConnect] = useState(false);
   const [status, setStatus] = useState(APP_DB_STATUS_INITIALIZATION);
@@ -43,7 +44,8 @@ const AppProviderDB = ({children}) => {
           setData(JSON.parse(response.data));
         };
       }
-    }, [status]);
+    }, [status],
+  );
 
   return (
     <DBContextStatus.Provider value={status}>
@@ -51,7 +53,11 @@ const AppProviderDB = ({children}) => {
         {firstConnect && children}
       </DBContext.Provider>
     </DBContextStatus.Provider>
-  )
+  );
+};
+
+AppProviderDB.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default AppProviderDB;

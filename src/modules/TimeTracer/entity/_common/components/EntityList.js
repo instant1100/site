@@ -10,23 +10,24 @@ import Typography from '@material-ui/core/Typography';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import EditIcon from '@material-ui/icons/Edit';
-import {Link} from 'react-router-dom';
-import {useTranslation} from 'react-i18next';
-import entityMap from '@/modules/TimeTracer/entity/entityMap';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import entityMap, { allEntities } from '@/modules/TimeTracer/entity/entityMap';
 import useDB from '@/core/AppDB/hooks/useDB';
-import {deleteEntity} from '@/core/AppDB/MethodsDB';
+import { deleteEntity } from '@/core/AppDB/MethodsDB';
+import PropTypes from 'prop-types';
 
-const EntityList = ({entityName, title}) => {
+const EntityList = ({ entityName, title }) => {
   const data = useDB()[entityName] || [];
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <List>
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
-      {data.map((entity) =>
+      {data.map((entity) => (
         <ListItem key={entity.id}>
           <Link
             color="inherit"
@@ -47,10 +48,19 @@ const EntityList = ({entityName, title}) => {
               <DeleteIcon />
             </IconButton>
           </ListItemSecondaryAction>
-        </ListItem>,
-      )}
+        </ListItem>
+      ))}
     </List>
-  )
+  );
+};
+
+EntityList.defaultProps = {
+  title: null,
+};
+
+EntityList.propTypes = {
+  entityName: PropTypes.oneOf(allEntities).isRequired,
+  title: PropTypes.string,
 };
 
 export default EntityList;

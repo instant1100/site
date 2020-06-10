@@ -5,11 +5,9 @@ const emptyActivity = {
   date: Date.now(),
 };
 
-const createActivityEntity = (data = {}) => {
-  return {
-    ...emptyActivity,
-    ...data,
-  }
-};
+const createActivityEntity = (data = {}) => ({
+  ...emptyActivity,
+  ...data,
+});
 
 export default createActivityEntity;

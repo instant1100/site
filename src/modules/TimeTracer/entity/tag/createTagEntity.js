@@ -3,11 +3,9 @@ const emptyTag = {
   name: '',
 };
 
-const createTagEntity = (data = {}) => {
-  return {
-    ...emptyTag,
-    ...data,
-  }
-};
+const createTagEntity = (data = {}) => ({
+  ...emptyTag,
+  ...data,
+});
 
 export default createTagEntity;

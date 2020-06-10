@@ -2,8 +2,8 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import detector from 'i18next-browser-languagedetector';
 
-import ru from './languages/ru.js';
-import en from './languages/en.js';
+import ru from './languages/ru';
+import en from './languages/en';
 
 export const languages = [
   {
@@ -11,7 +11,7 @@ export const languages = [
   },
   {
     id: 'en',
-  }
+  },
 ];
 
 i18n
@@ -30,8 +30,8 @@ i18n
     fallbackLng: 'en',
 
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 export default i18n;

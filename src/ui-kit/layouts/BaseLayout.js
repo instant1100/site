@@ -1,10 +1,11 @@
 import React from 'react';
-import {useTranslation} from 'react-i18next';
+import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import Container from '@material-ui/core/Container';
 import HeaderDefault from '@/modules/_main/components/Header/HeaderDefault';
 
-const BaseLayout = ({children, menu}) => {
+const BaseLayout = ({ children, menu }) => {
   const { t } = useTranslation();
 
   return (
@@ -18,6 +19,15 @@ const BaseLayout = ({children, menu}) => {
       </Container>
     </>
   );
+};
+
+BaseLayout.defaultProps = {
+  menu: null,
+};
+
+BaseLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  menu: PropTypes.node,
 };
 
 export default BaseLayout;

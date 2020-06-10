@@ -1,6 +1,6 @@
 export default {
   'In developing': 'В разработке.',
-  'Subscribe': 'Подписаться',
+  Subscribe: 'Подписаться',
   'Sign up': 'Регистрация',
   'step by step': 'Шаг за шагом',
   'Typing training': 'Тренировка печати',
@@ -41,5 +41,4 @@ export default {
   'menu/lessons': 'Лекции и задачи',
 
   'lessons/for_in_for': 'Вложенные циклы',
-}
-
+};
