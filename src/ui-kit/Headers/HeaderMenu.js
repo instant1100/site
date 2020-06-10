@@ -23,7 +23,7 @@ const HeaderMenu = ({sections, component}) => {
         <Link
           color="inherit"
           noWrap
-          key={section.id}
+          key={section.key}
           variant="body2"
           className={classes.toolbarLink}
           component={component}

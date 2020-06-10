@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Subscribe from '@/core/features/Subscribe/Subscribe';
 import InDeveloping from '@/core/features/InDeveloping/InDeveloping';
 import {useTranslation} from 'react-i18next';
-import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from '@/modules/_main/components/LanguageSwitcher/LanguageSwitcher';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({

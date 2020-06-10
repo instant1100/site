@@ -36,6 +36,10 @@ export default {
 
   'form/save': 'Сохранить',
 
-  'module/unavailable_module': 'Модуль временно недоступен'
+  'module/unavailable_module': 'Модуль временно недоступен',
+
+  'menu/lessons': 'Лекции и задачи',
+
+  'lessons/for_in_for': 'Вложенные циклы',
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import PageLayout from '@/ui-kit/layouts/PageLayout';
+import PageLayout from '@/modules/_main/components/PageLayout/PageLayout';
 
 const TypingPage = () => {
 
