@@ -97,7 +97,7 @@ const StreamsForm = () => {
                 <Input
                   id="select-multiple-chip"
                 />
-)}
+              )}
               renderValue={(selected) => (
                 <div className={classes.chips}>
                   {selected.map((value) => (
@@ -118,8 +118,7 @@ const StreamsForm = () => {
             </Select>
           </FormControl>
           <FormControl className={classes.formControl}>
-            <ImageLoader setFieldValue={setFieldValue} name="icon" />
-
+            <ImageLoader setFieldValue={setFieldValue} name="icon" oldImage={currentStreamEntity.icon} />
           </FormControl>
           <FormControl className={classes.formControl}>
             <Button

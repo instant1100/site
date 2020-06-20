@@ -5,12 +5,12 @@ function useLoadFormImage(setFieldValue, name) {
 
   const loadImage = (e) => {
     const file = e.target.files[0];
+    setFieldValue(name, file);
     const reader = new FileReader();
 
     if (file) {
       reader.onloadend = () => {
         setImage(reader.result);
-        setFieldValue(name, reader.result);
       };
 
       reader.readAsDataURL(file);
