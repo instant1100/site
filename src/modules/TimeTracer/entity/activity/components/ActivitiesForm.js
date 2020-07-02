@@ -87,7 +87,7 @@ const ActivitiesForm = () => {
                 <Input
                   id="select-multiple-chip"
                 />
-)}
+              )}
               renderValue={(selected) => (
                 <div className={classes.chips}>
                   {selected.map((value) => (

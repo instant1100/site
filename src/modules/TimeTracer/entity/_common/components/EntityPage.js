@@ -1,6 +1,5 @@
 import React from 'react';
 
-import BaseLayout from '@/ui-kit/layouts/BaseLayout';
 import DefaultFormPaper from '@/ui-kit/Forms/DefaultFormPaper';
 import Grid from '@material-ui/core/Grid';
 import {
@@ -44,7 +43,7 @@ const EntityPage = ({ entity: entityFromProps }) => {
   const ListComponent = componentMap[entity].list;
 
   return (
-    <BaseLayout>
+    <>
       <Grid container spacing={3}>
         <Grid item md={4}>
           <DefaultFormPaper>
@@ -57,7 +56,7 @@ const EntityPage = ({ entity: entityFromProps }) => {
           </DefaultFormPaper>
         </Grid>
       </Grid>
-    </BaseLayout>
+    </>
   );
 };
 

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import BaseLayout from '@/ui-kit/layouts/BaseLayout';
 import Grid from '@material-ui/core/Grid';
 import DefaultFormPaper from '@/ui-kit/Forms/DefaultFormPaper';
 import WordsForm from '@/modules/TimeTracer/entity/word/components/WordsForm';
@@ -13,7 +12,7 @@ import TagsForm from '@/modules/TimeTracer/entity/tag/components/TagsForm';
 import TagsList from '@/modules/TimeTracer/entity/tag/components/TagsList';
 
 const TimeTracerPage = () => (
-  <BaseLayout>
+  <>
     <Grid container spacing={3}>
       <Grid item md={4}>
         <DefaultFormPaper>
@@ -62,7 +61,7 @@ const TimeTracerPage = () => (
         </DefaultFormPaper>
       </Grid>
     </Grid>
-  </BaseLayout>
+  </>
 );
 
 export default TimeTracerPage;

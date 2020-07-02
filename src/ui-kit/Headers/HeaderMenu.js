@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   toolbarSecondary: {
     justifyContent: 'flex-start',
     overflowX: 'auto',
+    borderBottom: `1px solid ${theme.palette.divider}`,
   },
   toolbarLink: {
     padding: theme.spacing(1),
