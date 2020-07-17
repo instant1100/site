@@ -31,7 +31,6 @@ const useStyles = makeStyles(() => ({
 const StreamWatchPage = () => {
   const streams = useDB(STREAM_ENTITY);
   const classes = useStyles();
-  console.log(streams);
 
   return (
     <>

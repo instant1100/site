@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from '@/modules/_main/pages/MainPage/MainPage';
-import TypingPage from '@/modules/_main/pages/TypingPage/TypingPage';
 import modulesList from '@/core/modulesLoader/modulesList';
 import CheckComponent from '@/core/features/CheckComponent';
 
@@ -29,9 +28,6 @@ const AppRouter = () => {
       <Switch>
         <Route exact path="/">
           <MainPage />
-        </Route>
-        <Route exact path="/typing">
-          <TypingPage />
         </Route>
         {modules}
         <Route exact path="/404" component={NoMatchPage} />

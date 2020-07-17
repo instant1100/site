@@ -2,7 +2,7 @@ import React from 'react';
 
 import ListItem from '@material-ui/core/ListItem/ListItem';
 import ListItemText from '@material-ui/core/ListItemText/ListItemText';
-import useLoadFormImage from '@/components/_utils/ImageLoader/useLoadFormImage';
+import useLoadFormImage from '@/core/components/ImageLoader/useLoadFormImage';
 import PropTypes from 'prop-types';
 
 function ImageLoader({ setFieldValue, name, oldImage }) {

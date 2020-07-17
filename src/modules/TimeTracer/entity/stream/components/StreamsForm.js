@@ -14,7 +14,7 @@ import Select from '@material-ui/core/Select';
 import Chip from '@material-ui/core/Chip';
 import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
-import ImageLoader from '@/components/_utils/ImageLoader/ImageLoader';
+import ImageLoader from '@/core/components/ImageLoader/ImageLoader';
 import useSafeEntity from '@/modules/TimeTracer/entity/_common/useSafeEntity';
 import { STREAM_ENTITY, TAG_ENTITY } from '@/modules/TimeTracer/entity/entityMap';
 import useDB from '@/core/AppDB/hooks/useDB';

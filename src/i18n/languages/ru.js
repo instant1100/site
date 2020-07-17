@@ -44,4 +44,8 @@ export default {
   'time_tracer_menu/stream_watch': 'Активности',
 
   'lessons/for_in_for': 'Вложенные циклы',
+
+
+  'menu/typing': 'Отработка печати',
+
 };
