@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-function useLoadFormImage(setFieldValue, name) {
+function useLoadFormImage(onLoad) {
   const [image, setImage] = useState(null);
 
   const loadImage = (e) => {
     const file = e.target.files[0];
-    setFieldValue(name, file);
+    onLoad(file);
     const reader = new FileReader();
 
     if (file) {

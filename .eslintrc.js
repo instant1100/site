@@ -20,6 +20,10 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/jsx-props-no-spreading': 0,
     'arrow-body-style': 0,
+    'import/prefer-default-export': 0,
+    'react/no-array-index-key': 0,
+    'react/prop-types': 0,
+    'no-unused-vars': 'warn',
     'comma-dangle': ['error', 'always-multiline'],
   },
   settings: {

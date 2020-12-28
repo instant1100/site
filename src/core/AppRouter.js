@@ -26,10 +26,8 @@ const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <MainPage />
-        </Route>
         {modules}
+        <Route exact path="/" component={MainPage} />
         <Route exact path="/404" component={NoMatchPage} />
       </Switch>
     </Router>

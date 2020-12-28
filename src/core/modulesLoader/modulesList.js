@@ -1,6 +1,7 @@
 import useTimeTracerAvailable from '$TimeTracer/useAvailable';
 import useLessonsModule from '$Lessons/useAvailable';
 import useTypingModule from '$Typing/useAvailable';
+import useTehnologModule from '$Tehnolog/useAvailable';
 
 const modulesList = [
   {
@@ -20,6 +21,12 @@ const modulesList = [
     path: '/typing',
     component: () => import('../../modules/Typing/TypingModule'),
     checkHook: useTypingModule,
+  },
+  {
+    key: 'tehnolog',
+    path: '/tehnolog',
+    component: () => import('../../modules/Tehnolog/TehnologModule'),
+    checkHook: useTehnologModule,
   },
 ];
 

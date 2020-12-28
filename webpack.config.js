@@ -15,7 +15,9 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
       $TimeTracer: path.resolve(__dirname, 'src/modules/TimeTracer'),
+      $Typing: path.resolve(__dirname, 'src/modules/Typing'),
       $Lessons: path.resolve(__dirname, 'src/modules/Lessons'),
+      $Tehnolog: path.resolve(__dirname, 'src/modules/Tehnolog'),
     },
   },
   module: {

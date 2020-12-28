@@ -19,7 +19,11 @@ const useStyles = makeStyles((theme) => ({
 const DefaultFormPaper = ({ children }) => {
   const classes = useStyles();
 
-  return <Paper elevation={3} className={classes.paper}>{children}</Paper>;
+  return (
+    <Paper elevation={3} className={classes.paper}>
+      {children}
+    </Paper>
+  );
 };
 
 DefaultFormPaper.propTypes = {

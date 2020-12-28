@@ -1,23 +1,23 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import BaseLayout from '@/ui-kit/layouts/BaseLayout';
 
 import { useRouteMatch } from 'react-router';
-import TypingPage from '$Typing/pages/TypingPage';
+import PageLayout from '@/modules/_main/components/PageLayout/PageLayout';
+import TehnologPage from '$Tehnolog/pages/TehnologPage';
 
-const TypingModule = () => {
+const TehnologModule = () => {
   const { url } = useRouteMatch();
 
   return (
-    <BaseLayout>
+    <PageLayout>
       <Switch>
         <Route exact path={`${url}`}>
-          <TypingPage />
+          <TehnologPage />
         </Route>
         <Redirect to="/404" />
       </Switch>
-    </BaseLayout>
+    </PageLayout>
   );
 };
 
-export default TypingModule;
+export default TehnologModule;

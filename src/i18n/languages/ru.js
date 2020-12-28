@@ -47,5 +47,6 @@ export default {
 
 
   'menu/typing': 'Отработка печати',
+  'menu/tehnolog': 'Технолог',
 
 };
