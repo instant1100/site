@@ -16,10 +16,10 @@ const pageList = [
   },
 ];
 
-const TimeTracerMenu = () => {
+const TimeMenu = () => {
   const menuItems = useCreateMenu(pageList);
 
   return <HeaderMenu sections={menuItems} component={Link} />;
 };
 
-export default TimeTracerMenu;
+export default TimeMenu;

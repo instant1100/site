@@ -6,7 +6,6 @@ export default {
   'Typing training': 'Тренировка печати',
   'Time tracer': 'Отслеживание времени',
 
-
   'time_tracing/tags': 'Теги',
   'time_tracing/streams': 'Активности',
   'time_tracing/words': 'Все слова',
@@ -39,12 +38,12 @@ export default {
   'module/unavailable_module': 'Модуль временно недоступен',
 
   'menu/lessons': 'Лекции и задачи',
+  'menu/time': 'Время',
   'menu/time_tracer': 'Планирование времени',
   'time_tracer_menu/rest': 'Все формы',
   'time_tracer_menu/stream_watch': 'Активности',
 
   'lessons/for_in_for': 'Вложенные циклы',
-
 
   'menu/typing': 'Отработка печати',
   'menu/tehnolog': 'Технолог',

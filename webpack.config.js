@@ -14,6 +14,8 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      $Time: path.resolve(__dirname, 'src/modules/Time'),
+      $Jest: path.resolve(__dirname, 'src/modules/Jest'),
       $TimeTracer: path.resolve(__dirname, 'src/modules/TimeTracer'),
       $Typing: path.resolve(__dirname, 'src/modules/Typing'),
       $Lessons: path.resolve(__dirname, 'src/modules/Lessons'),
