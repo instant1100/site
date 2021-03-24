@@ -40,9 +40,9 @@ const TimePage = () => {
           <Grid container alignContent="start" className={classes.field}>
             <Grid item md={12}>
               {config.map((item) => (
-                <div onClick={() => handleClick(`${baseUrl}/${item.label}`)} key={item.label}>
+                <button type="button" onClick={() => handleClick(`${baseUrl}/${item.label}`)} key={item.label}>
                   <TimeProgress className={classes.item} {...item} />
-                </div>
+                </button>
               ))}
             </Grid>
           </Grid>

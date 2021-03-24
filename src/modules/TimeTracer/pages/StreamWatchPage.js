@@ -10,7 +10,6 @@ import CardContent from '@material-ui/core/CardContent';
 
 import { STREAM_ENTITY } from '$TimeTracer/entity/entityMap';
 
-
 const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',

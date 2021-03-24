@@ -23,6 +23,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/no-array-index-key': 0,
     'react/prop-types': 0,
+    'react/jsx-props-no-multi-spaces': 0,
     'no-unused-vars': 'warn',
     'comma-dangle': ['error', 'always-multiline'],
   },

@@ -4,6 +4,5 @@ export default {
   'Sign up': 'Sign up',
   'step by step': 'step by step',
 
-
   'time_tracing/new_stream': 'Create new stream',
 };

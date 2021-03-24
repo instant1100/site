@@ -21,7 +21,6 @@ firebase.initializeApp({
 const FirebaseProvider = ({ children }) => {
   const [connect, setConnect] = useState(false);
 
-
   firebase.auth().signInWithEmailAndPassword('angels1100@yandex.ru', '111111').then(() => {
     setConnect(firebase);
   });

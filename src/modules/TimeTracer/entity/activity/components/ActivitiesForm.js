@@ -40,7 +40,6 @@ const ActivitiesForm = () => {
   const streams = useDB(STREAM_ENTITY);
   const currentActivityEntity = useSafeEntity(ACTIVITY_ENTITY, id);
 
-
   const submit = useCallback((values) => saveEntity(ACTIVITY_ENTITY, id, values), [id]);
 
   return (
