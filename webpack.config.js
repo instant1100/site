@@ -1,4 +1,5 @@
 const path = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -14,6 +15,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      'ss': path.resolve(__dirname, 'src'),
       $Time: path.resolve(__dirname, 'src/modules/Time'),
       $Jest: path.resolve(__dirname, 'src/modules/Jest'),
       $TimeTracer: path.resolve(__dirname, 'src/modules/TimeTracer'),
@@ -21,25 +23,31 @@ module.exports = {
       $Lessons: path.resolve(__dirname, 'src/modules/Lessons'),
       $Tehnolog: path.resolve(__dirname, 'src/modules/Tehnolog'),
     },
+    plugins: [new TsconfigPathsPlugin()],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
   module: {
     rules: [
       {
-        test: /.js$/,
-        loader: ['babel-loader', 'eslint-loader'],
+        test: /.jsx?$/,
+        use: 'babel-loader',
         exclude: /node_modules/,
       },
       {
-        test: /.md$/,
-        loader: 'raw-loader',
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
-        test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        use: 'url-loader?limit=60000',
+        test: /\.(jpe?g|md|png|ttf|eot|svg|woff(2)?)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resource',
       },
     ],
   },
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   mode: 'development',
 };
