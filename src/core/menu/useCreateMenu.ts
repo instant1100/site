@@ -1,7 +1,9 @@
 import { useRouteMatch } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const useCreateMenu = (pageList) => {
+import { MenuItemType } from '/core/menu/interfaces';
+
+const useCreateMenu = (pageList: MenuItemType[]) => {
   const { url } = useRouteMatch();
   const { t } = useTranslation();
 

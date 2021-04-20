@@ -44,7 +44,7 @@ const Form = (
 
   const { t } = useTranslation();
   const currentStreamEntity = getDefaultEntity(entityConfig);
-  const config = entityConfig.map((item) => ({ ...item, label: t(item.name) }));
+  const config = entityConfig.map((item: any) => ({ ...item, label: t(item.name) }));
 
   return (
     <Formik

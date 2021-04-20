@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
+import { OnLoadCallback } from '/core/components/ImageLoader/interfaces';
 
-function useLoadFormImage(onLoad) {
+function useLoadFormImage(onLoad: OnLoadCallback) {
   const [image, setImage] = useState(null);
 
-  const loadImage = (e) => {
+  const loadImage = (e: FormEvent<HTMLInputElement>) => {
+    // @ts-ignore
     const file = e.target.files[0];
     onLoad(file);
     const reader = new FileReader();

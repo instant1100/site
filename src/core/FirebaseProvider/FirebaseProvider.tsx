@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import PropTypes from 'prop-types';
 import * as firebase from 'firebase/app';
 import 'firebase/database';
@@ -6,7 +6,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 
-import FirebaseContext from '@/core/FirebaseProvider/FirebaseContext';
+import FirebaseContext from '/core/FirebaseProvider/FirebaseContext';
 
 firebase.initializeApp({
   apiKey: 'AIzaSyC3qV9p5G7zp-i5xGPxstHvNjpJ6BZ9JGs',
@@ -18,10 +18,11 @@ firebase.initializeApp({
   appId: '1:403428181091:web:36e053d3bfdc4f85cce456',
 });
 
-const FirebaseProvider = ({ children }) => {
+const FirebaseProvider: FC = ({ children }) => {
   const [connect, setConnect] = useState(false);
 
   firebase.auth().signInWithEmailAndPassword('angels1100@yandex.ru', '111111').then(() => {
+    // @ts-ignore
     setConnect(firebase);
   });
 

@@ -1,9 +1,17 @@
 import AlertDialog from '@/ui-kit/Dialogs/Alert';
-import React from 'react';
+import React, {FC} from 'react';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
-const InDeveloping = ({ children }) => {
+type childrenRender = FC<{
+  onClick?: () => void
+}>
+
+type InDevelopingProps = {
+  children: childrenRender,
+}
+
+const InDeveloping: FC<InDevelopingProps> = ({ children }) => {
   const [open, setOpen] = React.useState(false);
   const { t } = useTranslation();
 

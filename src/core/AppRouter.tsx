@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from '@/modules/_main/pages/MainPage/MainPage';
-import modulesList from '@/core/modulesLoader/modulesList';
-import CheckComponent from '@/core/features/CheckComponent';
+import modulesList from '/core/modulesLoader/modulesList';
+import CheckComponent from '/core/features/CheckComponent';
 
 const NoMatchPage = () => (
   <MainPage />

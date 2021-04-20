@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
@@ -6,17 +6,18 @@ import Button from '@material-ui/core/Button';
 import { useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import {
-  FIELD_ID, FIELD_IMAGE, FIELD_SELECT, FIELD_TEXT,
-} from '@/core/forms/types';
-import MyTextField from '@/core/forms/components/Field/MyTextField';
-import MySelectField from '@/core/forms/components/Field/MySelectField';
-import MyFileField from '@/core/forms/components/Field/MyFileField';
+  FIELD_TYPES,
+} from '/core/forms/types';
+import MyTextField from '/core/forms/components/Field/MyTextField';
+import MySelectField from '/core/forms/components/Field/MySelectField';
+import MyFileField from '/core/forms/components/Field/MyFileField';
+import { DefaultFormViewProps } from '/core/forms/interfaces';
 
-const ComponentMap = {
-  [FIELD_ID]: null,
-  [FIELD_TEXT]: MyTextField,
-  [FIELD_SELECT]: MySelectField,
-  [FIELD_IMAGE]: MyFileField,
+const ComponentMap: any = {
+  [FIELD_TYPES.ID]: null,
+  [FIELD_TYPES.TEXT]: MyTextField,
+  [FIELD_TYPES.SELECT]: MySelectField,
+  [FIELD_TYPES.IMAGE]: MyFileField,
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -32,9 +33,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DefaultFormView = ({
-  config, handleChange, title, values, handleSubmit,
-}) => {
+const DefaultFormView: FC<DefaultFormViewProps> = (
+  {
+    config,
+    handleChange,
+    title,
+    values,
+    handleSubmit,
+  },
+) => {
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -43,16 +50,16 @@ const DefaultFormView = ({
       <Typography variant="h6" gutterBottom>
         {values.id ? title.edit : title.new}
       </Typography>
-      {config.map((field, index) => {
+      {config.map((field: any, index) => {
         const ComponentAdapter = ComponentMap[field.type];
 
-        const fieldProps = {};
+        const fieldProps: any = {};
         fieldProps.handleChange = handleChange;
         fieldProps.value = values[field.name];
         fieldProps.name = field.name;
         fieldProps.label = field.label;
         fieldProps.required = field.required;
-        fieldProps.values = field.values && field.values.map((select) => ({
+        fieldProps.values = field.values && field.values.map((select: any) => ({
           value: select,
           label: select,
         }));

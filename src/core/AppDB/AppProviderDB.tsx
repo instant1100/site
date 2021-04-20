@@ -1,45 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import DBContext, { DBContextStatus } from '@/core/AppDB/DBContext';
 import {
-  APP_DB_STATUS_CLOSE,
-  APP_DB_STATUS_CONNECTING,
-  APP_DB_STATUS_ERROR,
-  APP_DB_STATUS_HAS_DATA,
-  APP_DB_STATUS_INITIALIZATION,
-  APP_DB_STATUS_OPEN,
+  APP_DB_STATUS
 } from '@/core/AppDB/DBStatuses';
 import PropTypes from 'prop-types';
 
-const statusesForConnection = [APP_DB_STATUS_INITIALIZATION];
+const statusesForConnection = [APP_DB_STATUS.INITIALIZATION];
 
-const AppProviderDB = ({ children }) => {
+const AppProviderDB: FC = ({ children }) => {
   const [data, setData] = useState({});
   const [firstConnect, setFirstConnect] = useState(false);
-  const [status, setStatus] = useState(APP_DB_STATUS_INITIALIZATION);
+  const [status, setStatus] = useState(APP_DB_STATUS.INITIALIZATION);
 
   useEffect(
     () => {
       if (statusesForConnection.includes(status)) {
-        setStatus(APP_DB_STATUS_CONNECTING);
+        setStatus(APP_DB_STATUS.CONNECTING);
         const ws = new WebSocket('ws://localhost:8002/');
 
         ws.onclose = () => {
           setFirstConnect(true);
-          setStatus(APP_DB_STATUS_CLOSE);
+          setStatus(APP_DB_STATUS.CLOSE);
         };
 
         ws.onopen = () => {
-          setStatus(APP_DB_STATUS_OPEN);
+          setStatus(APP_DB_STATUS.OPEN);
         };
 
         ws.onerror = () => {
-          setStatus(APP_DB_STATUS_ERROR);
+          setStatus(APP_DB_STATUS.ERROR);
         };
 
         ws.onmessage = (response) => {
-          if (status !== APP_DB_STATUS_HAS_DATA) {
+          if (status !== APP_DB_STATUS.HAS_DATA) {
             setFirstConnect(true);
-            setStatus(APP_DB_STATUS_HAS_DATA);
+            setStatus(APP_DB_STATUS.HAS_DATA);
           }
           setData(JSON.parse(response.data));
         };

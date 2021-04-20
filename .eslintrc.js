@@ -5,12 +5,12 @@ const webpackConfigPath = './webpack.config.js';
 
 module.exports = {
   extends: ['airbnb'],
-  parser: "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "./"
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    'project': './tsconfig.json',
+    'tsconfigRootDir': './'
   },
-  plugins: ["@typescript-eslint", 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   globals: {
     __DEV__: true,
   },
@@ -18,6 +18,13 @@ module.exports = {
     browser: true,
     es6: true,
     jest: true,
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: path.resolve(__dirname, webpackConfigPath),
+      },
+    },
   },
   rules: {
     'react-hooks/rules-of-hooks': 'error',
@@ -31,8 +38,10 @@ module.exports = {
     'react/jsx-props-no-multi-spaces': 0,
     'no-unused-vars': 'warn',
     'comma-dangle': ['error', 'always-multiline'],
+    'import/no-absolute-path': 0,
+    'import/extensions': 0,
 
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"]
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error']
   },
 };

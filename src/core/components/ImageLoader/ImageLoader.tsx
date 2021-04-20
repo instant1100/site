@@ -1,20 +1,13 @@
-import React, { useCallback } from 'react';
+import React, { FC } from 'react';
+import PropTypes from 'prop-types';
 
 import ListItem from '@material-ui/core/ListItem/ListItem';
 import ListItemText from '@material-ui/core/ListItemText/ListItemText';
-import PropTypes from 'prop-types';
-import useLoadFormImage from '@/core/components/ImageLoader/useLoadFormImage';
+import useLoadFormImage from '/core/components/ImageLoader/useLoadFormImage';
+import { ImageLoaderProps } from '/core/components/ImageLoader/interfaces';
 
-function MyFileField({ handleChange, name, oldImage }) {
-  const onLoad = useCallback((file) => {
-    handleChange({
-      target: {
-        value: file,
-        name,
-      },
-    });
-  }, [handleChange, name]);
-  const [image, loadImage] = useLoadFormImage(onLoad, name);
+const ImageLoader: FC<ImageLoaderProps> = ({ setFieldValue, oldImage }) => {
+  const [image, loadImage] = useLoadFormImage(setFieldValue);
 
   return (
     // eslint-disable-next-line jsx-a11y/label-has-associated-control
@@ -27,15 +20,15 @@ function MyFileField({ handleChange, name, oldImage }) {
       {!image && oldImage && <img src={oldImage} width="100%" alt="" />}
     </label>
   );
-}
-MyFileField.defaultProps = {
+};
+
+ImageLoader.defaultProps = {
   oldImage: null,
 };
 
-MyFileField.propTypes = {
-  handleChange: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
+ImageLoader.propTypes = {
+  setFieldValue: PropTypes.func.isRequired,
   oldImage: PropTypes.string,
 };
 
-export default React.memo(MyFileField);
+export default React.memo(ImageLoader);

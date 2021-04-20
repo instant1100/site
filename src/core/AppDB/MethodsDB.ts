@@ -1,10 +1,11 @@
-import axios from 'axios';
+import axios, { Method } from 'axios';
+import { entityNameType } from '/core/AppDB/interfaces';
 
-export const saveEntity = (entity, id, data) => {
+export const saveEntity = (entityName: entityNameType, id: string, data: any) => {
   const form = new FormData();
   Object.keys(data).forEach((key) => {
     if (Array.isArray(data[key])) {
-      data[key].forEach((value) => {
+      data[key].forEach((value: any) => {
         form.append(`${key}[]`, value);
       });
     } else {
@@ -12,12 +13,12 @@ export const saveEntity = (entity, id, data) => {
     }
   });
 
-  let method = 'put';
-  let path = `${entity}`;
+  let method: Method = 'put';
+  let path = `${entityName}`;
 
   if (id) {
     method = 'post';
-    path = `${entity}/${id}`;
+    path = `${entityName}/${id}`;
   }
 
   return axios({
@@ -30,7 +31,7 @@ export const saveEntity = (entity, id, data) => {
   });
 };
 
-export const deleteEntity = (entity, id) => axios({
+export const deleteEntity = (entity: entityNameType, id: string) => axios({
   method: 'delete',
   url: `http://localhost:8001/${entity}/${id}`,
   headers: {

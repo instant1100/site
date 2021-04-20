@@ -4,14 +4,16 @@ import Select from '@material-ui/core/Select';
 import Input from '@material-ui/core/Input';
 import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
+import { SelectFieldProps } from '/core/forms/interfaces';
 
 const MySelectField = ({
   value, name, label, handleChange, values,
-}) => {
+}: SelectFieldProps) => {
   const [open, setOpen] = React.useState(false);
 
-  const onChange = (event) => {
+  const onChange = (event: any) => {
     handleChange(event);
+
     setOpen(false);
   };
 
@@ -40,18 +42,22 @@ const MySelectField = ({
         input={(
           <Input />
         )}
-        renderValue={(selected) => (
+        renderValue={(selected: any) => (
           <div>
-            {selected.map((select) => (
-              <Chip
-                key={select}
-                label={values.find((i) => i.value === select).label}
-              />
-            ))}
+            {selected.map((select: any) => {
+              const chipValue: any = values.find((i: any) => i.value === select);
+
+              return (
+                <Chip
+                  key={select}
+                  label={chipValue.label}
+                />
+              );
+            })}
           </div>
         )}
       >
-        {values.map((variant) => (
+        {values.map((variant: any) => (
           <MenuItem key={variant.value} value={variant.value}>
             {variant.label}
           </MenuItem>
