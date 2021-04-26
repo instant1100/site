@@ -5,13 +5,10 @@ import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import { useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import {
-  FIELD_TYPES,
-} from '/core/forms/types';
 import MyTextField from '/core/forms/components/Field/MyTextField';
 import MySelectField from '/core/forms/components/Field/MySelectField';
 import MyFileField from '/core/forms/components/Field/MyFileField';
-import { DefaultFormViewProps } from '/core/forms/interfaces';
+import { DefaultFormViewProps, FIELD_TYPES } from '/core/forms/interfaces';
 
 const ComponentMap: any = {
   [FIELD_TYPES.ID]: null,

@@ -1,11 +1,12 @@
 import { useContext } from 'react';
+
 import DBContext from '/core/AppDB/DBContext';
-import { entityMap, entityName } from '/core/AppDB/interfaces';
+import { AbstractEntity, EntityMap, EntityName } from '/core/AppDB/interfaces';
 
-const useDB = (entity: entityName) => {
-  const data = useContext<entityMap>(DBContext);
+const useDB = <T extends AbstractEntity>(entity: EntityName): T[] => {
+  const data: EntityMap = useContext<EntityMap>(DBContext);
 
-  return entity ? data[entity] || [] : data;
+  return (data[entity] || []) as T[];
 };
 
 export default useDB;

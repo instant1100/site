@@ -1,5 +1,10 @@
-export type entityNameType = string;
+export type EntityName = string;
 
-export type entityMap = {
-    [key: string]: any[];
+export interface AbstractEntity {
+    id: string,
+    [key: string]: any;
+}
+
+export type EntityMap = {
+    [key: string]: AbstractEntity[];
 };

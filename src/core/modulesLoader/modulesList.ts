@@ -1,8 +1,8 @@
-import useTimeAvailable from '$Time/useAvailable';
-import useTimeTracerAvailable from '$TimeTracer/useAvailable';
-import useLessonsModule from '$Lessons/useAvailable';
-import useTypingModule from '$Typing/useAvailable';
-import useTehnologModule from '$Tehnolog/useAvailable';
+import useTimeAvailable from '../../modules/Time/useAvailable';
+import useTimeTracerAvailable from '../../modules/TimeTracer/useAvailable';
+import useLessonsModule from '../../modules/Lessons/useAvailable';
+import useTypingModule from '../../modules/Typing/useAvailable';
+import useTehnologModule from '../../modules/Tehnolog/useAvailable';
 
 const modulesList = [
   {

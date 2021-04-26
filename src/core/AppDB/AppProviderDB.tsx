@@ -1,9 +1,10 @@
 import React, { FC, useEffect, useState } from 'react';
-import DBContext, { DBContextStatus } from '@/core/AppDB/DBContext';
-import {
-  APP_DB_STATUS
-} from '@/core/AppDB/DBStatuses';
 import PropTypes from 'prop-types';
+
+import DBContext, { DBContextStatus } from '/core/AppDB/DBContext';
+import {
+  APP_DB_STATUS,
+} from '/core/AppDB/DBStatuses';
 
 const statusesForConnection = [APP_DB_STATUS.INITIALIZATION];
 

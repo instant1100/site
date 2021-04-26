@@ -1,7 +1,7 @@
 import axios, { Method } from 'axios';
-import { entityNameType } from '/core/AppDB/interfaces';
+import { EntityName } from '/core/AppDB/interfaces';
 
-export const saveEntity = (entityName: entityNameType, id: string, data: any) => {
+export const saveEntity = (entityName: EntityName, id: string, data: any) => {
   const form = new FormData();
   Object.keys(data).forEach((key) => {
     if (Array.isArray(data[key])) {
@@ -31,7 +31,7 @@ export const saveEntity = (entityName: entityNameType, id: string, data: any) =>
   });
 };
 
-export const deleteEntity = (entity: entityNameType, id: string) => axios({
+export const deleteEntity = (entity: EntityName, id: string) => axios({
   method: 'delete',
   url: `http://localhost:8001/${entity}/${id}`,
   headers: {

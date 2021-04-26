@@ -1,8 +1,8 @@
 import React from 'react';
 import { APP_DB_STATUS } from '/core/AppDB/DBStatuses';
-import { entityMap } from '/core/AppDB/interfaces';
+import { EntityMap } from '/core/AppDB/interfaces';
 
-const DBContext = React.createContext<entityMap>(
+const DBContext = React.createContext<EntityMap>(
   {},
 );
 

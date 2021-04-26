@@ -6,7 +6,9 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 
-import FirebaseContext from '/core/FirebaseProvider/FirebaseContext';
+export const FirebaseContext = React.createContext<any>(
+  {},
+);
 
 firebase.initializeApp({
   apiKey: 'AIzaSyC3qV9p5G7zp-i5xGPxstHvNjpJ6BZ9JGs',
