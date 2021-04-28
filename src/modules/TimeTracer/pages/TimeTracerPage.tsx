@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import DefaultFormPaper from '@/ui-kit/Forms/DefaultFormPaper';
@@ -14,23 +14,27 @@ const entities = [
   ENTITIES_LIST.TAG,
 ];
 
-const TimeTracerPage = () => {
-  return entities.map((entityName) => (
-    <Grid container spacing={3}>
-      <Grid item md={4}>
-        <DefaultFormPaper>
-          <EntityForm
-            entityName={entityName}
-          />
-        </DefaultFormPaper>
-      </Grid>
-      <Grid item md={4}>
-        <DefaultFormPaper>
-          <EntityList entityName={entityName} />
-        </DefaultFormPaper>
-      </Grid>
-    </Grid>
-  ));
+const TimeTracerPage: FC = () => {
+  return (
+    <>
+      {entities.map((entityName) => (
+        <Grid container spacing={3}>
+          <Grid item md={4}>
+            <DefaultFormPaper>
+              <EntityForm
+                entityName={entityName}
+              />
+            </DefaultFormPaper>
+          </Grid>
+          <Grid item md={4}>
+            <DefaultFormPaper>
+              <EntityList entityName={entityName} />
+            </DefaultFormPaper>
+          </Grid>
+        </Grid>
+      ))}
+    </>
+  );
 };
 
 export default TimeTracerPage;

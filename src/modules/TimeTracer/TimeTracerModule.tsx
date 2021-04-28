@@ -2,11 +2,11 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router';
 
-import TimeTracerPage from '$TimeTracer/pages/TimeTracerPage';
 import { allEntities } from '$TimeTracer/entity/entityMap';
 import MainLayout from '$TimeTracer/layouts/MainLayout';
 import StreamWatchPage from '$TimeTracer/pages/StreamWatchPage';
-import EntityPage from '$TimeTracer/entity/_common/components/EntityPage';
+import TimeTracerPage from './pages/TimeTracerPage';
+import EntityPage from './pages/EntityPage';
 
 const TimeTracerModule = () => {
   const { url } = useRouteMatch();

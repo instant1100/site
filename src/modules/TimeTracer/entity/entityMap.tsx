@@ -16,6 +16,10 @@ type EntityMapConfigs = {
   [key in string]: EntityConfig<AbstractEntity>
 }
 
+export const allEntities = [
+  ENTITIES_LIST.ACTIVITY, ENTITIES_LIST.STREAM, ENTITIES_LIST.TAG, ENTITIES_LIST.WORD
+]
+
 const entityMap: EntityMapConfigs = {
   [ENTITIES_LIST.ACTIVITY]: activityEntityConfig,
   [ENTITIES_LIST.STREAM]: streamEntityConfig,
