@@ -1,22 +1,24 @@
 import React, { FC, useContext } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Formik } from 'formik';
 
 import { getDefaultEntity } from '/core/forms/types';
-import { FIELD_TYPES, FormProps, ValueMap } from '/core/forms/interfaces';
+import { FormProps, ValueMap } from '/core/forms/interfaces/interfaces';
 import { FirebaseContext } from '/core/FirebaseProvider/FirebaseProvider';
+import { AbstractEntity } from '/core/AppDB/interfaces';
+import { FIELD_TYPES } from '/core/forms/interfaces/fields';
 
-const Form: FC<FormProps> = (
+const Form: FC<FormProps<AbstractEntity>> = (
   {
-    formConfig,
+    entityConfig,
     ViewComponent,
+    handleSubmit,
   },
 ) => {
   const firebase = useContext(FirebaseContext);
 
   const submit = async (values: {[key: string]: any}) => {
     const valuesForDB = Object.keys(values)
-      .filter((key) => formConfig.find((field) => field.name === key).type !== FIELD_TYPES.IMAGE)
+      .filter((key) => entityConfig.fields.find((field) => field.name === key).type !== FIELD_TYPES.IMAGE)
       .reduce((map: ValueMap, key) => {
         // eslint-disable-next-line no-param-reassign
         map[key] = values[key];
@@ -30,7 +32,7 @@ const Form: FC<FormProps> = (
 
     const { id } = docRef;
 
-    const loadsFile = formConfig
+    const loadsFile = entityConfig.fields
       .filter((field) => field.type === FIELD_TYPES.IMAGE)
       .filter((field) => values[field.name])
       .map((field) => {
@@ -46,13 +48,11 @@ const Form: FC<FormProps> = (
     return Promise.all(loadsFile);
   };
 
-  const { t } = useTranslation();
-  const currentStreamEntity = getDefaultEntity(formConfig);
-  const config = formConfig.map((item: any) => ({ ...item, label: t(item.name) }));
+  const initialValues = getDefaultEntity(entityConfig);
 
   return (
     <Formik
-      initialValues={currentStreamEntity}
+      initialValues={initialValues}
       enableReinitialize
 
       onSubmit={(values) => {
@@ -66,10 +66,9 @@ const Form: FC<FormProps> = (
       }) => (
         <ViewComponent
           values={values}
-          config={config}
+          entityConfig={entityConfig}
           handleSubmit={handleSubmit}
           handleChange={handleChange}
-          title=""
         />
       )}
     </Formik>

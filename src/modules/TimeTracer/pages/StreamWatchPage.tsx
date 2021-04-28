@@ -8,8 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 
 import useDB from '/core/AppDB/hooks/useDB';
-import { STREAM_ENTITY } from '$TimeTracer/entity/entityMap';
-import { Stream } from '$TimeTracer/entity/interfaces';
+import { ENTITIES_LIST } from '../entity/entityMap';
+import { StreamEntity } from '../entity/entities/streamEntity';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const StreamWatchPage = () => {
-  const streams = useDB<Stream>(STREAM_ENTITY);
+  const streams = useDB<StreamEntity>(ENTITIES_LIST.STREAM);
   const classes = useStyles();
 
   return (
@@ -41,7 +41,7 @@ const StreamWatchPage = () => {
               <Card className={classes.root}>
                 <CardMedia
                   className={classes.cover}
-                  image={stream.image}
+                  image={stream.icon}
                   title={stream.name}
                 />
                 <CardContent className={classes.content}>

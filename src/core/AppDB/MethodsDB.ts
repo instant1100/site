@@ -28,7 +28,7 @@ export const saveEntity = (entityName: EntityName, id: string, data: any) => {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
-  });
+  }).then(() => true);
 };
 
 export const deleteEntity = (entity: EntityName, id: string) => axios({

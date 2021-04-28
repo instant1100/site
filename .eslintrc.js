@@ -36,12 +36,17 @@ module.exports = {
     'react/no-array-index-key': 0,
     'react/prop-types': 0,
     'react/jsx-props-no-multi-spaces': 0,
-    'no-unused-vars': 'warn',
     'comma-dangle': ['error', 'always-multiline'],
     'import/no-absolute-path': 0,
     'import/extensions': 0,
 
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error']
+    '@typescript-eslint/no-use-before-define': ['error'],
+
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error"
   },
 };

@@ -5,7 +5,7 @@ import ListItemText from '@material-ui/core/ListItemText/ListItemText';
 import PropTypes from 'prop-types';
 
 import useLoadFormImage from '/core/components/ImageLoader/useLoadFormImage';
-import { FileFieldProps } from '/core/forms/interfaces';
+import { FileFieldProps } from '/core/forms/interfaces/interfaces';
 
 function MyFileField({ handleChange, name, oldImage }: FileFieldProps) {
   const onLoad = useCallback((file) => {

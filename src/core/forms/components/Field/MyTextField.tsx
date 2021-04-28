@@ -1,6 +1,6 @@
 import TextField from '@material-ui/core/TextField';
 import React from 'react';
-import { FieldProps } from '/core/forms/interfaces';
+import { FieldProps } from '/core/forms/interfaces/interfaces';
 
 const MyTextField = ({
   value, name, label, handleChange, required,

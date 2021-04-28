@@ -4,11 +4,12 @@ import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
 import MyTextField from '/core/forms/components/Field/MyTextField';
 import MySelectField from '/core/forms/components/Field/MySelectField';
 import MyFileField from '/core/forms/components/Field/MyFileField';
-import { DefaultFormViewProps, FIELD_TYPES } from '/core/forms/interfaces';
+import { FIELD_TYPES } from '/core/forms/interfaces/fields';
+import { DefaultFormViewProps } from '/core/forms/components/DefaultFormView/interfaces';
+import { useStyles } from '/core/forms/components/DefaultFormView/styles';
 
 const ComponentMap: any = {
   [FIELD_TYPES.ID]: null,
@@ -17,37 +18,26 @@ const ComponentMap: any = {
   [FIELD_TYPES.IMAGE]: MyFileField,
 };
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    marginTop: theme.spacing(3),
-  },
-  formControl: {
-    margin: theme.spacing(1),
-  },
-  form: {
-    flexDirection: 'column',
-    display: 'flex',
-  },
-}));
-
 const DefaultFormView: FC<DefaultFormViewProps> = (
   {
-    config,
     handleChange,
-    title,
     values,
     handleSubmit,
+    entityConfig,
   },
 ) => {
   const classes = useStyles();
   const { t } = useTranslation();
 
+  const formTitle = values.id ? entityConfig.titles.edit : entityConfig.titles.new;
+  const { fields } = entityConfig;
+
   return (
     <form onSubmit={handleSubmit} noValidate autoComplete="off" className={classes.form}>
       <Typography variant="h6" gutterBottom>
-        {values.id ? title.edit : title.new}
+        {t(formTitle)}
       </Typography>
-      {config.map((field: any, index) => {
+      {fields.map((field: any, index) => {
         const ComponentAdapter = ComponentMap[field.type];
 
         const fieldProps: any = {};

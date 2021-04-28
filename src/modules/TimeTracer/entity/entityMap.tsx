@@ -1,49 +1,26 @@
-import getActivityTitle from '@/modules/TimeTracer/entity/activity/getActivityTitle';
-import createActivityEntity from '@/modules/TimeTracer/entity/activity/createActivityEntity';
-
-import getStreamTitle from '@/modules/TimeTracer/entity/stream/getStreamTitle';
-import createStreamEntity from '@/modules/TimeTracer/entity/stream/createStreamEntity';
-import getTagTitle from '@/modules/TimeTracer/entity/tag/getTagTitle';
-import getWordTitle from '@/modules/TimeTracer/entity/word/getWordTitle';
-import createTagEntity from '@/modules/TimeTracer/entity/tag/createTagEntity';
-import createWordEntity from '@/modules/TimeTracer/entity/word/createWordEntity';
-import { Activity } from '$TimeTracer/entity/interfaces';
-import { TFunction } from 'react-i18next';
 import { AbstractEntity } from '/core/AppDB/interfaces';
+import { EntityConfig } from '/core/forms/interfaces/interfaces';
+import { wordEntityConfig } from '$TimeTracer/entity/entities/wordEntity';
+import { activityEntityConfig } from '$TimeTracer/entity/entities/activityEntity';
+import { streamEntityConfig } from '$TimeTracer/entity/entities/streamEntity';
+import { tagEntityConfig } from '$TimeTracer/entity/entities/tagEntity';
 
-export const ACTIVITY_ENTITY = 'activities';
-export const STREAM_ENTITY = 'streams';
-export const TAG_ENTITY = 'tags';
-export const WORD_ENTITY = 'words';
-
-export const allEntities = [
-  ACTIVITY_ENTITY,
-  STREAM_ENTITY,
-  TAG_ENTITY,
-  WORD_ENTITY,
-];
-type entityConfig<T extends AbstractEntity> = {
-  getTitle: (entity: T, t: TFunction) => string,
-  createEntity: (data: T) => T,
+export enum ENTITIES_LIST {
+  ACTIVITY = 'activities',
+  STREAM = 'streams',
+  TAG = 'tags',
+  WORD = 'words',
 }
 
-const entityMap: {[key: string]: entityConfig<any>} = {
-  [ACTIVITY_ENTITY]: {
-    getTitle: getActivityTitle,
-    createEntity: createActivityEntity,
-  },
-  [STREAM_ENTITY]: {
-    getTitle: getStreamTitle,
-    createEntity: createStreamEntity,
-  },
-  [TAG_ENTITY]: {
-    getTitle: getTagTitle,
-    createEntity: createTagEntity,
-  },
-  [WORD_ENTITY]: {
-    getTitle: getWordTitle,
-    createEntity: createWordEntity,
-  },
+type EntityMapConfigs = {
+  [key in string]: EntityConfig<AbstractEntity>
+}
+
+const entityMap: EntityMapConfigs = {
+  [ENTITIES_LIST.ACTIVITY]: activityEntityConfig,
+  [ENTITIES_LIST.STREAM]: streamEntityConfig,
+  [ENTITIES_LIST.TAG]: tagEntityConfig,
+  [ENTITIES_LIST.WORD]: wordEntityConfig,
 };
 
 export default entityMap;
