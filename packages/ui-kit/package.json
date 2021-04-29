@@ -1,0 +1,40 @@
+{
+  "name": "@instant1100/ui-kit",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Zubkov Valerii <webmaster@instant1100.com>",
+  "homepage": "https://github.com/instant1100/site#readme",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/instant1100/site.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/instant1100/site/issues"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "markdown-to-jsx": "^6.11.0"
+  },
+  "devDependencies": {
+    "@types/markdown-to-jsx": "^6.11.3"
+  }
+}

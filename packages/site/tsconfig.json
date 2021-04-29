@@ -9,5 +9,11 @@
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "/*": ["./src/*"],
+      "@/*": ["./src/*"],
+      "$*": ["./src/modules/*"]
+    }
   }
 }
