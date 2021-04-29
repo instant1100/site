@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Link, useRouteMatch } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
-import PageLayout from '../../_main/components/PageLayout/PageLayout';
 import { Paper } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -22,7 +21,6 @@ const MainLessonsPage = () => {
   }));
 
   return (
-    <PageLayout>
       <Grid container spacing={3}>
         <Grid item md={4}>
           <Paper>
@@ -40,7 +38,6 @@ const MainLessonsPage = () => {
           </Paper>
         </Grid>
       </Grid>
-    </PageLayout>
   );
 };
 

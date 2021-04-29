@@ -3,7 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import HeaderMenu from '@instant1100/ui-kit/src/Headers/HeaderMenu';
-import modulesList from '../../../../core/modulesLoader/modulesList';
+import modulesList from '/modulesList';
 
 const DefaultMenu = () => {
   const { t } = useTranslation();

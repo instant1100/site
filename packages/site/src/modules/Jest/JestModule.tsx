@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router';
-import MainLessonsPage from '$Lessons/pages/MainLessonsPage';
 
 const JestModule = () => {
   const { url } = useRouteMatch();
@@ -9,7 +8,7 @@ const JestModule = () => {
   return (
     <Switch>
       <Route exact path={`${url}`}>
-        <MainLessonsPage />
+          111
       </Route>
 
     </Switch>

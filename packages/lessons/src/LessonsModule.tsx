@@ -1,6 +1,7 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router';
+import { Route, Switch } from 'react-router-dom';
+
 import MainLessonsPage from './pages/MainLessonsPage';
 
 const LessonsModule = () => {
