@@ -5,6 +5,7 @@
   "author": "Zubkov Valerii <webmaster@instant1100.com>",
   "homepage": "https://github.com/instant1100/site#readme",
   "license": "ISC",
+  "private": true,
   "main": "src/index.ts",
   "directories": {
     "lib": "src",
@@ -27,15 +28,13 @@
     "react": "*",
     "react-dom": "*"
   },
+  "devDependencies": {
+    "markdown-to-jsx": "^6.11.0"
+  },
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.2.1",
     "@types/markdown-to-jsx": "^6.11.3",
     "react-i18next": "^11.3.4"
-  },
-  "devDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "markdown-to-jsx": "^6.11.0"
   }
 }

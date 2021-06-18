@@ -13,6 +13,7 @@ import dailyPosts from '../../../../db/daylyPosts/daylyPosts';
 import featuredPosts from '../../../../db/featurePosts/featuredPosts';
 import PageLayout from '../../components/PageLayout/PageLayout';
 import Sidebar from '../../../../temp/Sidebar';
+import DefaultMenu from '$_main/components/Menu/DefaultMenu';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -22,9 +23,10 @@ const useStyles = makeStyles((theme) => ({
 
 const MainPage = () => {
   const classes = useStyles();
-
   return (
-    <PageLayout>
+    <PageLayout
+      menu={<DefaultMenu />}
+    >
       <MainFeaturedPost post={featurePost} />
       <Grid container spacing={4}>
         {featuredPosts.map((post) => (

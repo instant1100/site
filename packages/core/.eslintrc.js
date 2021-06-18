@@ -1,6 +1,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const path = require('path');
 
+const webpackConfigPath = './webpack.config.js';
+
 module.exports = {
   extends: ['airbnb'],
   parser: '@typescript-eslint/parser',

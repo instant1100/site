@@ -4,13 +4,13 @@ import Container from '@material-ui/core/Container';
 
 import { BaseLayoutProps } from './interfaces';
 
-const BaseLayout: FC<BaseLayoutProps> = (
+export const BaseLayout: FC<BaseLayoutProps> = (
   {
     children,
     menu,
-    header
-  }) => {
-
+    header,
+  },
+) => {
   return (
     <>
       <Container maxWidth="lg">
@@ -23,5 +23,3 @@ const BaseLayout: FC<BaseLayoutProps> = (
     </>
   );
 };
-
-export default BaseLayout;

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from '$_main/pages/MainPage/MainPage';
 import CheckComponent from './features/CheckComponent';
-import modulesList from '/modulesList';
+import modulesList from '../modulesList';
 
 const NoMatchPage = () => (
   <MainPage />
@@ -10,6 +10,7 @@ const NoMatchPage = () => (
 
 const AppRouter = () => {
   const modules = modulesList.map(({ path, component, checkHook }) => {
+    // @ts-ignore
     const Component = React.lazy(component);
 
     return (
