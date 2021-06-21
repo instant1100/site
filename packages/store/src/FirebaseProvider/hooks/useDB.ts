@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import DBContext from '../../AppDB/DBContext';
-import { EntityName } from '../../AppDB/interfaces';
+import DBContext from '../../core/DBContext';
+import { EntityName } from '../../core/interfaces';
 
 const useDB = (entity: EntityName) => {
   const data = useContext(DBContext);

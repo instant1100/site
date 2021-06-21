@@ -1,4 +1,4 @@
-import useHasData from '../../core/AppDB/hooks/useHasData';
+import { useHasData } from '@instant1100/store';
 
 const useAvailable = () => {
   return useHasData();

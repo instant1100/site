@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@instant1100/ui-kit';
 
 const useStyles = makeStyles(() => ({
   wrapper: {

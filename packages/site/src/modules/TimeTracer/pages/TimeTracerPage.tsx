@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import Grid from '@material-ui/core/Grid';
+import { Grid } from '@instant1100/ui-kit';
 import DefaultFormPaper from '@instant1100/ui-kit/src/Forms/DefaultFormPaper';
 
 import EntityForm from '../entity/_common/EntityForm';

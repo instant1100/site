@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { InitUiKit } from '@instant1100/ui-kit';
+import { AppProviderDB, FirebaseProvider } from '@instant1100/store';
 
 import AppRouter from './AppRouter';
-import AppProviderDB from './AppDB/AppProviderDB';
-import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 
-const App:FC<{}> = () => (
+const App:FC = () => (
   <>
-    <CssBaseline />
+    <InitUiKit />
 
     <AppProviderDB>
       <FirebaseProvider>

@@ -1,7 +1,7 @@
-import List from '@material-ui/core/List';
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
+
+import { List, Typography } from '@instant1100/ui-kit';
 
 const UnavailableModuleWidget = () => {
   const { t } = useTranslation();

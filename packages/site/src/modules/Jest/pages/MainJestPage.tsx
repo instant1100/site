@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Grid from '@material-ui/core/Grid';
-import PageLayout from '../../_main/components/PageLayout/PageLayout';
-import { Paper } from '@material-ui/core';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import List from '@material-ui/core/List';
+import {
+  Paper, List, Divider, ListItem, ListItemText, Grid,
+} from '@instant1100/ui-kit';
+
 import { useTranslation } from 'react-i18next';
 import { Link, useRouteMatch } from 'react-router-dom';
+import PageLayout from '../../_main/components/PageLayout/PageLayout';
 
 const MainJestPage = () => {
   const { t } = useTranslation();

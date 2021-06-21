@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import { makeStyles, Grid } from '@instant1100/ui-kit';
 
 import PostList from '@instant1100/ui-kit/src/widgets/PostList/PostList';
 import MainFeaturedPost from '@instant1100/ui-kit/src/widgets/MainFeaturedPost/MainFeaturedPost';

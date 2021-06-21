@@ -1,6 +1,7 @@
+import { AbstractEntity } from '@instant1100/store';
+
 import { EntityConfig, ValueMap } from './interfaces/interfaces';
 import { FIELD_TYPES } from './interfaces/fields';
-import { AbstractEntity } from '../AppDB/interfaces';
 
 const map: ValueMap = {
   [FIELD_TYPES.ID]: null,

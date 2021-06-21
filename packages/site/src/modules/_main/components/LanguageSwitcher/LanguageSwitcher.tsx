@@ -1,6 +1,6 @@
 import React from 'react';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
+import { Select, MenuItem } from '@instant1100/ui-kit';
+
 import i18n, { languages } from '../../../../i18n/i18n';
 
 const LanguageSwitcher = () => {

@@ -1,5 +1,5 @@
-import TextField from '@material-ui/core/TextField';
 import React from 'react';
+import { TextField } from '@instant1100/ui-kit';
 import { FieldProps } from '../../interfaces/interfaces';
 
 const MyTextField = ({

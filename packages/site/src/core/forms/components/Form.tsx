@@ -1,10 +1,9 @@
 import React, { FC, useContext } from 'react';
 import { Formik } from 'formik';
+import { FirebaseContext, AbstractEntity } from '@instant1100/store';
 
 import { getDefaultEntity } from '../types';
 import { FormProps, ValueMap } from '../interfaces/interfaces';
-import { FirebaseContext } from '../../FirebaseProvider/FirebaseProvider';
-import { AbstractEntity } from '../../AppDB/interfaces';
 import { FIELD_TYPES } from '../interfaces/fields';
 
 const Form: FC<FormProps<AbstractEntity>> = (

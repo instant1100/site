@@ -1,10 +1,9 @@
 import React, { useCallback } from 'react';
-
-import ListItem from '@material-ui/core/ListItem/ListItem';
-import ListItemText from '@material-ui/core/ListItemText/ListItemText';
 import PropTypes from 'prop-types';
 
-import useLoadFormImage from '../../../components/ImageLoader/useLoadFormImage';
+import { ListItem, ListItemText } from '@instant1100/ui-kit';
+import { useLoadFormImage } from '@instant1100/forms';
+
 import { FileFieldProps } from '../../interfaces/interfaces';
 
 function MyFileField({ handleChange, name, oldImage }: FileFieldProps) {

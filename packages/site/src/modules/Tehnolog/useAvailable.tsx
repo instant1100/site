@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { FirebaseContext } from '../../core/FirebaseProvider/FirebaseProvider';
+import { FirebaseContext } from '@instant1100/store';
 
 const useAvailable = () => {
   const firebase = useContext(FirebaseContext);

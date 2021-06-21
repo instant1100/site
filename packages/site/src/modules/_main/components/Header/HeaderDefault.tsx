@@ -2,12 +2,10 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
-import Typography from '@material-ui/core/Typography';
+import {
+  makeStyles, Toolbar, Button, IconButton, SearchIcon, Typography,
+} from '@instant1100/ui-kit';
+
 import Subscribe from '../../../../core/features/Subscribe/Subscribe';
 import InDeveloping from '../../../../core/features/InDeveloping/InDeveloping';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';

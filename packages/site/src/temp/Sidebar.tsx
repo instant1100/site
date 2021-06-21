@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+
+import {
+  makeStyles, Grid, Paper, Typography, Link,
+} from '@instant1100/ui-kit';
 
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {

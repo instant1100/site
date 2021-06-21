@@ -1,13 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {
+  Grid, makeStyles, Card, CardMedia, Typography, CardContent,
+} from '@instant1100/ui-kit';
 
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import CardContent from '@material-ui/core/CardContent';
-
-import useDB from '../../../core/AppDB/hooks/useDB';
+import { useDB } from '@instant1100/store';
 import { ENTITIES_LIST } from '../entity/entityMap';
 import { StreamEntity } from '../entity/entities/streamEntity';
 
@@ -35,7 +31,7 @@ const StreamWatchPage = () => {
   return (
     <>
       <Grid container direction="column" spacing={3}>
-        {streams.map((stream) => {
+        {streams.map((stream: StreamEntity) => {
           return (
             <Grid key={stream.id} item md={12}>
               <Card className={classes.root}>

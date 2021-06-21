@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@instant1100/ui-kit';
 
 import getProgress from '$Typing/utils/getProgress';
 import LinearTimeSpend from '$Time/components/TimeProgress/LinearTimeSpend';

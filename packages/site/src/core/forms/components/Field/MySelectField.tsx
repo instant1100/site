@@ -1,9 +1,8 @@
 import React from 'react';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import Input from '@material-ui/core/Input';
-import Chip from '@material-ui/core/Chip';
-import MenuItem from '@material-ui/core/MenuItem';
+import {
+  InputLabel, Select, Input, Chip, MenuItem,
+} from '@instant1100/ui-kit';
+
 import { SelectFieldProps } from '../../interfaces/interfaces';
 
 const MySelectField = ({

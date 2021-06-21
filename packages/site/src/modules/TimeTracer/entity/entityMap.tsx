@@ -1,5 +1,5 @@
-import { AbstractEntity } from '../../../core/AppDB/interfaces';
-import { EntityConfig } from '../../../core/forms/interfaces/interfaces';
+import { AbstractEntity } from '@instant1100/store';
+import { EntityConfig } from '/core/forms/interfaces/interfaces';
 import { wordEntityConfig } from '$TimeTracer/entity/entities/wordEntity';
 import { activityEntityConfig } from '$TimeTracer/entity/entities/activityEntity';
 import { streamEntityConfig } from '$TimeTracer/entity/entities/streamEntity';
@@ -17,8 +17,8 @@ type EntityMapConfigs = {
 }
 
 export const allEntities = [
-  ENTITIES_LIST.ACTIVITY, ENTITIES_LIST.STREAM, ENTITIES_LIST.TAG, ENTITIES_LIST.WORD
-]
+  ENTITIES_LIST.ACTIVITY, ENTITIES_LIST.STREAM, ENTITIES_LIST.TAG, ENTITIES_LIST.WORD,
+];
 
 const entityMap: EntityMapConfigs = {
   [ENTITIES_LIST.ACTIVITY]: activityEntityConfig,

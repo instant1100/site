@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 
-import Typography from '@material-ui/core/Typography';
-import FormControl from '@material-ui/core/FormControl';
-import Button from '@material-ui/core/Button';
+import { Button, FormControl, Typography } from '@instant1100/ui-kit';
+
 import { useTranslation } from 'react-i18next';
 import MyTextField from '../Field/MyTextField';
 import MySelectField from '../Field/MySelectField';

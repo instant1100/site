@@ -1,6 +1,7 @@
 ﻿import { FormEventHandler } from 'react';
+import { AbstractEntity } from '@instant1100/store';
+
 import { EntityConfig } from '../../interfaces/interfaces';
-import { AbstractEntity } from '../../../AppDB/interfaces';
 
 export type DefaultFormViewProps = {
   handleChange: (e: any) => void,

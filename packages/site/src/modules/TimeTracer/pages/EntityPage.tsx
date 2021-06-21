@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useParams } from 'react-router';
 
-import Grid from '@material-ui/core/Grid';
+import { Grid } from '@instant1100/ui-kit';
 
 import DefaultFormPaper from '@instant1100/ui-kit/src/Forms/DefaultFormPaper';
 import EntityForm from '$TimeTracer/entity/_common/EntityForm';

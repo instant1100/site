@@ -1,5 +1,5 @@
 import { ChangeEventHandler } from 'react';
-import { AbstractEntity } from '../../AppDB/interfaces';
+import { AbstractEntity } from '@instant1100/store';
 import { FieldConfig } from './fields';
 
 export type FieldProps = {

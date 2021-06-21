@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import LinearProgressWithLabel from '@material-ui/core/LinearProgress';
+import { LinearProgressWithLabel } from '@instant1100/ui-kit';
 
 const LinearTimeSpend:FC<{fullWeeks: number, passedWeeks: number}> = ({
   fullWeeks,

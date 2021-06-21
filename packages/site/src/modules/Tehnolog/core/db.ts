@@ -1,6 +1,6 @@
 // firebase.auth().createUserWithEmailAndPassword('angels1100@yandex.ru', '111111')
 // .then(console.log).catch((error) => {
-
+/*
 firebase.auth()
   .signInWithEmailAndPassword('angels1100@yandex.ru', '111111')
   .then(() => {
@@ -22,3 +22,4 @@ firebase.auth()
         console.error('Error adding document: ', error);
       });
   });
+*/
