@@ -7,6 +7,7 @@ import modulesList from '../../../../modulesList';
 
 const DefaultMenu = () => {
   const { t } = useTranslation();
+
   const menuItems = modulesList
     .filter((item) => item.checkHook())
     .map((item) => ({
@@ -15,7 +16,7 @@ const DefaultMenu = () => {
       key: item.key,
       url: item.path,
     }));
-  console.log(menuItems);
+
   return <HeaderMenu sections={menuItems} component={Link} />;
 };
 

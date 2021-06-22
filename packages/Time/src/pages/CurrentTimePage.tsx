@@ -3,8 +3,8 @@ import { useParams } from 'react-router';
 
 import { Grid, Paper, makeStyles } from '@instant1100/ui-kit';
 
-import getConfig from '$Time/configs/getConfig';
-import TimeProgress from '$Time/components/TimeProgress/TimeProgress';
+import getConfig from '../configs/getConfig';
+import TimeProgress from '../components/TimeProgress';
 
 const useStyles = makeStyles(() => ({
   root: {

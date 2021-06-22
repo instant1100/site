@@ -12,7 +12,7 @@ export { default as DeleteIcon } from '@material-ui/icons/Delete';
 export { default as ListItemAvatar } from '@material-ui/core/ListItemAvatar';
 export { default as Avatar }from '@material-ui/core/Avatar';
 export { default as EditIcon } from '@material-ui/icons/Edit';
-export { default as Button } from '@material-ui/core/Typography';
+export { default as Button } from '@material-ui/core/Button';
 export { default as FormControl } from '@material-ui/core/FormControl';
 
 export { default as InputLabel } from '@material-ui/core/InputLabel';
@@ -33,3 +33,4 @@ export { makeStyles } from '@material-ui/core/styles';
 
 export { BaseLayout } from './layouts/BaseLayout';
 export { InitUiKit } from './core/InitUiKit';
+export { default as HeaderMenu } from './Headers/HeaderMenu';

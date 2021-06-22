@@ -2,10 +2,10 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router';
 
-import getConfig from '$Time/configs/getConfig';
-import MainLayout from '$Time/layouts/MainLayout';
-import TimePage from '$Time/pages/TimePage';
-import CurrentTimePage from '$Time/pages/CurrentTimePage';
+import getConfig from './configs/getConfig';
+import MainLayout from './layouts/MainLayout';
+import TimePage from './pages/TimePage';
+import CurrentTimePage from './pages/CurrentTimePage';
 
 const TimeModule = () => {
   const { url } = useRouteMatch();

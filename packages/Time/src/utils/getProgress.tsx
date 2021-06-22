@@ -1,4 +1,4 @@
-import getWeeksCount from '$Typing/utils/getWeeksCount';
+import getWeeksCount from './getWeeksCount';
 
 const getProgress = (start: number, end: number) => {
   const now = Date.now();

@@ -1,9 +1,6 @@
 import { FC } from 'react';
 
-import useTimeAvailable from './modules/Time/useAvailable';
-import useTimeTracerAvailable from './modules/TimeTracer/useAvailable';
-import useTypingModule from './modules/Typing/useAvailable';
-import useTehnologModule from './modules/Tehnolog/useAvailable';
+import { useAvailable, TypingModule } from '@instant1100/typing';
 
 type LazyComponent = () => Promise<any>;
 
@@ -15,7 +12,12 @@ type ModulesListItem = {
 }
 
 const modulesList: ModulesListItem[] = [
-
+  {
+    key: 'typing',
+    path: '/typing',
+    component: TypingModule,
+    checkHook: useAvailable,
+  },
 ];
 
 export default modulesList;

@@ -24,6 +24,8 @@
 	"workspaces": ["../packages/*"],
 	"dependencies": {
 		"@instant1100/forms": "0.0.0",
+		"@instant1100/typing": "0.0.0",
+		"@instant1100/time": "0.0.0",
 		"@instant1100/store": "0.0.0",
 		"@instant1100/ui-kit": "0.0.0",
 		"axios": "^0.19.2",

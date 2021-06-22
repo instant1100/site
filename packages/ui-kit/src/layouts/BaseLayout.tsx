@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 
 import Container from '@material-ui/core/Container';
-
 import { BaseLayoutProps } from './interfaces';
 
 export const BaseLayout: FC<BaseLayoutProps> = (

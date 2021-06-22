@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { BaseLayout } from '@instant1100/ui-kit';
 
 import { useRouteMatch } from 'react-router';
-import TypingPage from '$Typing/pages/TypingPage';
+import TypingPage from './pages/TypingPage';
 
 const TypingModule = () => {
   const { url } = useRouteMatch();

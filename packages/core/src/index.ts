@@ -1,11 +1,1 @@
-
-const createDependencyProvider = (
-  {
-    context: {},
-    dependencies: {
-
-    }
-  }) => ({children} : any) => {
-
-  return children
-}
+export { default as useCreateMenu } from './menu/useCreateMenu';

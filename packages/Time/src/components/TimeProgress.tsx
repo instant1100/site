@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 
 import { makeStyles } from '@instant1100/ui-kit';
 
-import getProgress from '$Typing/utils/getProgress';
-import LinearTimeSpend from '$Time/components/TimeProgress/LinearTimeSpend';
-import TableTimeSpend from '$Time/components/TimeProgress/TableTimeSpend';
+import getProgress from '../utils/getProgress';
+import LinearTimeSpend from './LinearTimeSpend';
+import TableTimeSpend from './TableTimeSpend';
 
 const useStyles = makeStyles(() => ({
   wrapper: {
