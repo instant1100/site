@@ -11,7 +11,7 @@ const NoMatchPage = () => (
 const AppRouter = () => {
   const modules = modulesList.map(({ path, component, checkHook }) => {
     // @ts-ignore
-    const Component = React.lazy(component);
+    const Component = component;
 
     return (
       <Route path={path} key={path}>
