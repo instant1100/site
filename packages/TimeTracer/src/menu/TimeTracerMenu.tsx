@@ -1,7 +1,9 @@
-import HeaderMenu from '@instant1100/ui-kit/src/Headers/HeaderMenu';
-import { Link } from 'react-router-dom';
 import React from 'react';
-import useCreateMenu from '../../../core/menu/useCreateMenu';
+import { Link } from 'react-router-dom';
+
+import { HeaderMenu } from '@instant1100/ui-kit';
+import { useCreateMenu } from '@instant1100/core';
+
 
 const pageList = [
   {

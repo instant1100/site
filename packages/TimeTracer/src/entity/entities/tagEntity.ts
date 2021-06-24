@@ -1,5 +1,5 @@
-import { FIELD_TYPES } from '../../../../core/forms/interfaces/fields';
-import { EntityConfig } from '../../../../core/forms/interfaces/interfaces';
+import { FIELD_TYPES } from '@instant1100/forms';
+import { EntityConfig } from '@instant1100/forms';
 
 export type TagEntity = {
   id: string,

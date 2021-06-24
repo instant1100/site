@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 
 import entityMap from '../entityMap';
-import Form from '../../../../core/forms/components/Form';
-import DefaultFormView from '../../../../core/forms/components/DefaultFormView/DefaultFormView';
+import { Form, DefaultFormView } from '@instant1100/forms';
 
 const handleSubmit = async (e: any): Promise<boolean> => {
   console.log(e);

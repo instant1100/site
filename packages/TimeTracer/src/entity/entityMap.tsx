@@ -1,9 +1,11 @@
 import { AbstractEntity } from '@instant1100/store';
-import { EntityConfig } from '/core/forms/interfaces/interfaces';
-import { wordEntityConfig } from '$TimeTracer/entity/entities/wordEntity';
-import { activityEntityConfig } from '$TimeTracer/entity/entities/activityEntity';
-import { streamEntityConfig } from '$TimeTracer/entity/entities/streamEntity';
-import { tagEntityConfig } from '$TimeTracer/entity/entities/tagEntity';
+
+import { EntityConfig } from '@instant1100/forms';
+
+import { wordEntityConfig } from './entities/wordEntity';
+import { activityEntityConfig } from './entities/activityEntity';
+import { streamEntityConfig } from './entities/streamEntity';
+import { tagEntityConfig } from './entities/tagEntity';
 
 export enum ENTITIES_LIST {
   ACTIVITY = 'activities',

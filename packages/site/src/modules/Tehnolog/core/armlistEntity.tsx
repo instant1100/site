@@ -1,5 +1,4 @@
-import { FIELD_TYPES } from '../../../core/forms/interfaces/fields';
-import { EntityConfig } from '../../../core/forms/interfaces/interfaces';
+import { FIELD_TYPES, EntityConfig } from '@instant1100/forms';
 
 export type ArmlistEntity = {
   id: string,

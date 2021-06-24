@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useDB, deleteEntity, AbstractEntity } from '@instant1100/store';
+import { EntityConfig } from '@instant1100/forms';
 
 import {
   ListItemText, List, ListItem, ListItemSecondaryAction,
@@ -9,8 +10,6 @@ import {
 } from '@instant1100/ui-kit';
 
 import entityMap from '../entityMap';
-
-import { EntityConfig } from '/core/forms/interfaces/interfaces';
 
 type EntityListProps = {
     entityName: string,

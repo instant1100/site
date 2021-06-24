@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
-
+import { useTranslation } from 'react-i18next';
 import { Button, FormControl, Typography } from '@instant1100/ui-kit';
 
-import { useTranslation } from 'react-i18next';
 import MyTextField from '../Field/MyTextField';
 import MySelectField from '../Field/MySelectField';
 import MyFileField from '../Field/MyFileField';

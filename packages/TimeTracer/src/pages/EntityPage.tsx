@@ -1,11 +1,10 @@
 import React, { FC } from 'react';
 import { useParams } from 'react-router';
 
-import { Grid } from '@instant1100/ui-kit';
+import { Grid, DefaultFormPaper } from '@instant1100/ui-kit';
 
-import DefaultFormPaper from '@instant1100/ui-kit/src/Forms/DefaultFormPaper';
-import EntityForm from '$TimeTracer/entity/_common/EntityForm';
-import EntityList from '$TimeTracer/entity/_common/EntityList';
+import EntityForm from '../entity/_common/EntityForm';
+import EntityList from '../entity/_common/EntityList';
 
 type EntityPageProps = {
   entity?: string,

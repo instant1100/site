@@ -32,5 +32,7 @@ export { default as Container } from '@material-ui/core/Container';
 export { makeStyles } from '@material-ui/core/styles';
 
 export { BaseLayout } from './layouts/BaseLayout';
+export { BaseLayoutProps } from './layouts/interfaces';
 export { InitUiKit } from './core/InitUiKit';
 export { default as HeaderMenu } from './Headers/HeaderMenu';
+export { default as DefaultFormPaper } from './Forms/DefaultFormPaper';

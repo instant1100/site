@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { Grid } from '@instant1100/ui-kit';
-import DefaultFormPaper from '@instant1100/ui-kit/src/Forms/DefaultFormPaper';
+import { DefaultFormPaper } from '@instant1100/ui-kit';
 
 import EntityForm from '../entity/_common/EntityForm';
 import { ENTITIES_LIST } from '../entity/entityMap';
